@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Conman
+//  Kasperl
 //
 //  Created by Matthias Keiser on 05/06/2020.
 //  Copyright © 2020 Matthias Keiser. All rights reserved.
@@ -11,15 +11,15 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
-
+    let appController = AppController()
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        appController.start()
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
     }
+
 
 
 }

@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D81460F2249021E00039E14C /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81460F1249021E00039E14C /* AppController.swift */; };
+		D86B665D248ECFC900C3A493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BB7A5B248AABF600119E39 /* Assets.xcassets */; };
+		D86B665F248ED1C600C3A493 /* Icon128.png in Resources */ = {isa = PBXBuildFile; fileRef = D86B665E248ED1C600C3A493 /* Icon128.png */; };
+		D8869C3B248C1F7400CDE957 /* LoginItemPreferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8869C3A248C1F7400CDE957 /* LoginItemPreferenceController.swift */; };
+		D8BB7A58248AABF200119E39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BB7A57248AABF200119E39 /* AppDelegate.swift */; };
+		D8BB7A5C248AABF600119E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BB7A5B248AABF600119E39 /* Assets.xcassets */; };
+		D8BB7A5F248AABF600119E39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8BB7A5D248AABF600119E39 /* Main.storyboard */; };
+		D8BB7A72248BBF2D00119E39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BB7A71248BBF2D00119E39 /* AppDelegate.swift */; };
+		D8BB7A79248BBF2F00119E39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8BB7A77248BBF2F00119E39 /* Main.storyboard */; };
+		D8BB7A80248BBF5F00119E39 /* ConsoleChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BB7A67248AAC1D00119E39 /* ConsoleChecker.swift */; };
+		D8BB7A84248BBFC400119E39 /* Kasperl Helper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = D8BB7A6F248BBF2D00119E39 /* Kasperl Helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D8BB7A86248BC03D00119E39 /* HelperAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BB7A85248BC03D00119E39 /* HelperAppController.swift */; };
+		D8BB7A88248BC1CF00119E39 /* HelperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BB7A87248BC1CF00119E39 /* HelperController.swift */; };
+		D8BB7A8A248BD98C00119E39 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BB7A69248AF2D700119E39 /* NotificationController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D8BB7A81248BBF8100119E39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8BB7A4C248AABF200119E39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8BB7A6E248BBF2D00119E39;
+			remoteInfo = "Kasperl Helper";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D8BB7A83248BBF9300119E39 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				D8BB7A84248BBFC400119E39 /* Kasperl Helper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D81460F1249021E00039E14C /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		D86B665E248ED1C600C3A493 /* Icon128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon128.png; path = ImageSources/Icon128.png; sourceTree = SOURCE_ROOT; };
+		D8869C3A248C1F7400CDE957 /* LoginItemPreferenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginItemPreferenceController.swift; sourceTree = "<group>"; };
+		D8BB7A54248AABF200119E39 /* Konsole Kasperl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Konsole Kasperl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8BB7A57248AABF200119E39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D8BB7A5B248AABF600119E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8BB7A5E248AABF600119E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D8BB7A60248AABF600119E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8BB7A61248AABF600119E39 /* Kasperl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kasperl.entitlements; sourceTree = "<group>"; };
+		D8BB7A67248AAC1D00119E39 /* ConsoleChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleChecker.swift; sourceTree = "<group>"; };
+		D8BB7A69248AF2D700119E39 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D8BB7A6F248BBF2D00119E39 /* Kasperl Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kasperl Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8BB7A71248BBF2D00119E39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D8BB7A78248BBF2F00119E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D8BB7A7A248BBF3000119E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8BB7A7B248BBF3000119E39 /* Kasperl_Helper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kasperl_Helper.entitlements; sourceTree = "<group>"; };
+		D8BB7A85248BC03D00119E39 /* HelperAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAppController.swift; sourceTree = "<group>"; };
+		D8BB7A87248BC1CF00119E39 /* HelperController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8BB7A51248AABF200119E39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8BB7A6C248BBF2D00119E39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8BB7A4B248AABF200119E39 = {
+			isa = PBXGroup;
+			children = (
+				D8BB7A56248AABF200119E39 /* Kasperl */,
+				D8BB7A70248BBF2D00119E39 /* Kasperl Helper */,
+				D8BB7A55248AABF200119E39 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8BB7A55248AABF200119E39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8BB7A54248AABF200119E39 /* Konsole Kasperl.app */,
+				D8BB7A6F248BBF2D00119E39 /* Kasperl Helper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8BB7A56248AABF200119E39 /* Kasperl */ = {
+			isa = PBXGroup;
+			children = (
+				D8BB7A57248AABF200119E39 /* AppDelegate.swift */,
+				D81460F1249021E00039E14C /* AppController.swift */,
+				D8BB7A87248BC1CF00119E39 /* HelperController.swift */,
+				D8869C3A248C1F7400CDE957 /* LoginItemPreferenceController.swift */,
+				D8BB7A5B248AABF600119E39 /* Assets.xcassets */,
+				D8BB7A5D248AABF600119E39 /* Main.storyboard */,
+				D8BB7A60248AABF600119E39 /* Info.plist */,
+				D8BB7A61248AABF600119E39 /* Kasperl.entitlements */,
+				D86B665E248ED1C600C3A493 /* Icon128.png */,
+			);
+			path = Kasperl;
+			sourceTree = "<group>";
+		};
+		D8BB7A70248BBF2D00119E39 /* Kasperl Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D8BB7A71248BBF2D00119E39 /* AppDelegate.swift */,
+				D8BB7A67248AAC1D00119E39 /* ConsoleChecker.swift */,
+				D8BB7A69248AF2D700119E39 /* NotificationController.swift */,
+				D8BB7A85248BC03D00119E39 /* HelperAppController.swift */,
+				D8BB7A77248BBF2F00119E39 /* Main.storyboard */,
+				D8BB7A7A248BBF3000119E39 /* Info.plist */,
+				D8BB7A7B248BBF3000119E39 /* Kasperl_Helper.entitlements */,
+			);
+			path = "Kasperl Helper";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8BB7A53248AABF200119E39 /* Konsole Kasperl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8BB7A64248AABF600119E39 /* Build configuration list for PBXNativeTarget "Konsole Kasperl" */;
+			buildPhases = (
+				D8BB7A50248AABF200119E39 /* Sources */,
+				D8BB7A51248AABF200119E39 /* Frameworks */,
+				D8BB7A52248AABF200119E39 /* Resources */,
+				D8BB7A83248BBF9300119E39 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8BB7A82248BBF8100119E39 /* PBXTargetDependency */,
+			);
+			name = "Konsole Kasperl";
+			productName = Kasperl;
+			productReference = D8BB7A54248AABF200119E39 /* Konsole Kasperl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D8BB7A6E248BBF2D00119E39 /* Kasperl Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8BB7A7C248BBF3000119E39 /* Build configuration list for PBXNativeTarget "Kasperl Helper" */;
+			buildPhases = (
+				D8BB7A6B248BBF2D00119E39 /* Sources */,
+				D8BB7A6C248BBF2D00119E39 /* Frameworks */,
+				D8BB7A6D248BBF2D00119E39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kasperl Helper";
+			productName = "Kasperl Helper";
+			productReference = D8BB7A6F248BBF2D00119E39 /* Kasperl Helper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8BB7A4C248AABF200119E39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Matthias Keiser";
+				TargetAttributes = {
+					D8BB7A53248AABF200119E39 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					D8BB7A6E248BBF2D00119E39 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = D8BB7A4F248AABF200119E39 /* Build configuration list for PBXProject "Kasperl" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8BB7A4B248AABF200119E39;
+			productRefGroup = D8BB7A55248AABF200119E39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8BB7A53248AABF200119E39 /* Konsole Kasperl */,
+				D8BB7A6E248BBF2D00119E39 /* Kasperl Helper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8BB7A52248AABF200119E39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8BB7A5C248AABF600119E39 /* Assets.xcassets in Resources */,
+				D8BB7A5F248AABF600119E39 /* Main.storyboard in Resources */,
+				D86B665F248ED1C600C3A493 /* Icon128.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8BB7A6D248BBF2D00119E39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D86B665D248ECFC900C3A493 /* Assets.xcassets in Resources */,
+				D8BB7A79248BBF2F00119E39 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8BB7A50248AABF200119E39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8BB7A88248BC1CF00119E39 /* HelperController.swift in Sources */,
+				D8869C3B248C1F7400CDE957 /* LoginItemPreferenceController.swift in Sources */,
+				D8BB7A58248AABF200119E39 /* AppDelegate.swift in Sources */,
+				D81460F2249021E00039E14C /* AppController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8BB7A6B248BBF2D00119E39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8BB7A72248BBF2D00119E39 /* AppDelegate.swift in Sources */,
+				D8BB7A80248BBF5F00119E39 /* ConsoleChecker.swift in Sources */,
+				D8BB7A8A248BD98C00119E39 /* NotificationController.swift in Sources */,
+				D8BB7A86248BC03D00119E39 /* HelperAppController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D8BB7A82248BBF8100119E39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8BB7A6E248BBF2D00119E39 /* Kasperl Helper */;
+			targetProxy = D8BB7A81248BBF8100119E39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D8BB7A5D248AABF600119E39 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8BB7A5E248AABF600119E39 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D8BB7A77248BBF2F00119E39 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8BB7A78248BBF2F00119E39 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8BB7A62248AABF600119E39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D8BB7A63248AABF600119E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D8BB7A65248AABF600119E39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kasperl/Kasperl.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V85GBYB7B9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Kasperl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TristanInc.Kasperl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D8BB7A66248AABF600119E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kasperl/Kasperl.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V85GBYB7B9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Kasperl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TristanInc.Kasperl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D8BB7A7D248BBF3000119E39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Kasperl Helper/Kasperl_Helper.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V85GBYB7B9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Kasperl Helper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TristanInc.Kasperl-Helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D8BB7A7E248BBF3000119E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Kasperl Helper/Kasperl_Helper.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V85GBYB7B9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Kasperl Helper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TristanInc.Kasperl-Helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8BB7A4F248AABF200119E39 /* Build configuration list for PBXProject "Kasperl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8BB7A62248AABF600119E39 /* Debug */,
+				D8BB7A63248AABF600119E39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8BB7A64248AABF600119E39 /* Build configuration list for PBXNativeTarget "Konsole Kasperl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8BB7A65248AABF600119E39 /* Debug */,
+				D8BB7A66248AABF600119E39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8BB7A7C248BBF3000119E39 /* Build configuration list for PBXNativeTarget "Kasperl Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8BB7A7D248BBF3000119E39 /* Debug */,
+				D8BB7A7E248BBF3000119E39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8BB7A4C248AABF200119E39 /* Project object */;
+}
