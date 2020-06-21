@@ -704,20 +704,12 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="391" height="174"/>
+                    <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="391" height="209"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UDX-4L-l3g">
-                                <rect key="frame" x="38" y="20" width="335" height="28"/>
-                                <textFieldCell key="cell" controlSize="small" title="When selected, Kasperl will automatically start in the background and keep monitoring even after you quit this app." id="xk6-r8-WBh">
-                                    <font key="font" metaFont="menu" size="11"/>
-                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9rp-0d-QtB">
-                                <rect key="frame" x="18" y="54" width="178" height="18"/>
+                                <rect key="frame" x="18" y="66" width="178" height="18"/>
                                 <buttonCell key="cell" type="check" title="Always run in background" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="ZCI-pb-mzH">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -731,7 +723,7 @@
                                 </connections>
                             </button>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GJy-TW-yur">
-                                <rect key="frame" x="20" y="90" width="64" height="64"/>
+                                <rect key="frame" x="164" y="139" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="mpl-ig-h5k"/>
                                     <constraint firstAttribute="height" constant="64" id="roa-PQ-8uP"/>
@@ -739,34 +731,41 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Icon128" id="Irc-Hj-mDV"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dVn-Go-RdE">
-                                <rect key="frame" x="109" y="114" width="176" height="16"/>
+                                <rect key="frame" x="92" y="112" width="208" height="19"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Konsole Kasperl is running..." id="6go-4v-s9s">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="font" metaFont="systemSemibold" size="15"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UDX-4L-l3g">
+                                <rect key="frame" x="18" y="30" width="355" height="28"/>
+                                <textFieldCell key="cell" controlSize="small" title="When selected, Kasperl will automatically start in the background and keep monitoring even after you quit this app." id="xk6-r8-WBh">
+                                    <font key="font" metaFont="message" size="11"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="UDX-4L-l3g" secondAttribute="bottom" constant="20" id="0P4-o7-uqc"/>
-                            <constraint firstItem="GJy-TW-yur" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="3gU-yR-7qQ"/>
-                            <constraint firstItem="dVn-Go-RdE" firstAttribute="centerY" secondItem="GJy-TW-yur" secondAttribute="centerY" id="4Ny-yQ-11z"/>
+                            <constraint firstItem="dVn-Go-RdE" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="0hi-Xa-b5t"/>
+                            <constraint firstItem="9rp-0d-QtB" firstAttribute="top" secondItem="dVn-Go-RdE" secondAttribute="bottom" constant="30" id="3TI-Ra-RPR"/>
+                            <constraint firstItem="dVn-Go-RdE" firstAttribute="top" secondItem="GJy-TW-yur" secondAttribute="bottom" constant="8" id="7zD-31-dc5"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9rp-0d-QtB" secondAttribute="trailing" constant="20" id="APF-id-iX5"/>
-                            <constraint firstItem="GJy-TW-yur" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="Acf-u5-bLz"/>
-                            <constraint firstItem="UDX-4L-l3g" firstAttribute="leading" secondItem="9rp-0d-QtB" secondAttribute="leading" constant="20" id="JWx-fS-fbY"/>
-                            <constraint firstItem="UDX-4L-l3g" firstAttribute="top" secondItem="9rp-0d-QtB" secondAttribute="bottom" constant="8" id="LM0-9e-UBD"/>
-                            <constraint firstItem="dVn-Go-RdE" firstAttribute="leading" secondItem="GJy-TW-yur" secondAttribute="trailing" constant="27" id="NQq-SO-PTO"/>
-                            <constraint firstItem="9rp-0d-QtB" firstAttribute="top" secondItem="GJy-TW-yur" secondAttribute="bottom" constant="20" id="Q48-uM-SAA"/>
-                            <constraint firstItem="9rp-0d-QtB" firstAttribute="leading" secondItem="GJy-TW-yur" secondAttribute="leading" id="WzD-xH-CAN"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dVn-Go-RdE" secondAttribute="trailing" constant="20" id="jWA-TR-sWA"/>
-                            <constraint firstAttribute="trailing" secondItem="UDX-4L-l3g" secondAttribute="trailing" constant="20" id="w0L-AR-yT5"/>
+                            <constraint firstItem="UDX-4L-l3g" firstAttribute="leading" secondItem="9rp-0d-QtB" secondAttribute="leading" id="B44-wt-nVR"/>
+                            <constraint firstAttribute="trailing" secondItem="UDX-4L-l3g" secondAttribute="trailing" constant="20" id="DgK-Zq-ffX"/>
+                            <constraint firstItem="9rp-0d-QtB" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="DiK-e1-Mcb"/>
+                            <constraint firstItem="UDX-4L-l3g" firstAttribute="top" secondItem="9rp-0d-QtB" secondAttribute="bottom" constant="10" id="IO7-5w-Ljn"/>
+                            <constraint firstItem="GJy-TW-yur" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="YWz-He-axq"/>
+                            <constraint firstItem="GJy-TW-yur" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="d1t-0E-xTG"/>
+                            <constraint firstAttribute="bottom" secondItem="UDX-4L-l3g" secondAttribute="bottom" constant="30" id="sWr-g5-mep"/>
                         </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="lfv-Ba-pBF"/>
             </objects>
-            <point key="canvasLocation" x="-22.5" y="678"/>
+            <point key="canvasLocation" x="-22.5" y="727.5"/>
         </scene>
     </scenes>
     <resources>
