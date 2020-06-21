@@ -1,4 +1,4 @@
-#Konsole Kasperl
+# Konsole Kasperl
 
 _A little macOS utility that warns you if Console.app is running in the background._
 
