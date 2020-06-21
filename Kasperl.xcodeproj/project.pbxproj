@@ -23,16 +23,6 @@
 		D8BB7A8A248BD98C00119E39 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BB7A69248AF2D700119E39 /* NotificationController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		D8BB7A81248BBF8100119E39 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D8BB7A4C248AABF200119E39 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D8BB7A6E248BBF2D00119E39;
-			remoteInfo = "Kasperl Helper";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		D8BB7A83248BBF9300119E39 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -148,7 +138,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				D8BB7A82248BBF8100119E39 /* PBXTargetDependency */,
 			);
 			name = "Konsole Kasperl";
 			productName = Kasperl;
@@ -255,14 +244,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D8BB7A82248BBF8100119E39 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D8BB7A6E248BBF2D00119E39 /* Kasperl Helper */;
-			targetProxy = D8BB7A81248BBF8100119E39 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D8BB7A5D248AABF600119E39 /* Main.storyboard */ = {
@@ -453,6 +434,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TristanInc.Kasperl-Helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -473,6 +455,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TristanInc.Kasperl-Helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
