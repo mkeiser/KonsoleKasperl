@@ -11,15 +11,18 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    let appController = AppController()
+    let helperController = HelperController()
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        appController.start()
+        helperController.start()
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true
     }
 
+    func applicationWillTerminate(_ notification: Notification) {
+        helperController.stop()
+    }
 
 
 }

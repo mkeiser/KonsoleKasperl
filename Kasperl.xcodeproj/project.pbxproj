@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D81460F2249021E00039E14C /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81460F1249021E00039E14C /* AppController.swift */; };
 		D86B665D248ECFC900C3A493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BB7A5B248AABF600119E39 /* Assets.xcassets */; };
 		D86B665F248ED1C600C3A493 /* Icon128.png in Resources */ = {isa = PBXBuildFile; fileRef = D86B665E248ED1C600C3A493 /* Icon128.png */; };
-		D8869C3B248C1F7400CDE957 /* LoginItemPreferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8869C3A248C1F7400CDE957 /* LoginItemPreferenceController.swift */; };
 		D8BB7A58248AABF200119E39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BB7A57248AABF200119E39 /* AppDelegate.swift */; };
 		D8BB7A5C248AABF600119E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BB7A5B248AABF600119E39 /* Assets.xcassets */; };
 		D8BB7A5F248AABF600119E39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8BB7A5D248AABF600119E39 /* Main.storyboard */; };
@@ -37,9 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D81460F1249021E00039E14C /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		D86B665E248ED1C600C3A493 /* Icon128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon128.png; path = ImageSources/Icon128.png; sourceTree = SOURCE_ROOT; };
-		D8869C3A248C1F7400CDE957 /* LoginItemPreferenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginItemPreferenceController.swift; sourceTree = "<group>"; };
 		D8BB7A54248AABF200119E39 /* Konsole Kasperl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Konsole Kasperl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BB7A57248AABF200119E39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8BB7A5B248AABF600119E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,9 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				D8BB7A57248AABF200119E39 /* AppDelegate.swift */,
-				D81460F1249021E00039E14C /* AppController.swift */,
 				D8BB7A87248BC1CF00119E39 /* HelperController.swift */,
-				D8869C3A248C1F7400CDE957 /* LoginItemPreferenceController.swift */,
 				D8BB7A5B248AABF600119E39 /* Assets.xcassets */,
 				D8BB7A5D248AABF600119E39 /* Main.storyboard */,
 				D8BB7A60248AABF600119E39 /* Info.plist */,
@@ -226,9 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8BB7A88248BC1CF00119E39 /* HelperController.swift in Sources */,
-				D8869C3B248C1F7400CDE957 /* LoginItemPreferenceController.swift in Sources */,
 				D8BB7A58248AABF200119E39 /* AppDelegate.swift in Sources */,
-				D81460F2249021E00039E14C /* AppController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
