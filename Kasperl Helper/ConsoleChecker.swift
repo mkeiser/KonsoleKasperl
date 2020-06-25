@@ -7,6 +7,7 @@
 //
 
 import AppKit
+import os
 
 let consoleAppBundleID = "com.apple.Console"
 
@@ -73,7 +74,6 @@ class ConsoleMonitor: NSObject {
             self?.checkIfConsoleRunningInBackground()
         }
         timer?.tolerance = 3
-        print("checking in \(self.intervalTier.timeInterval) seconds, warnNextCheck = \(warnNextCheck)")
     }
 
     private func doStopMonitoring() {
