@@ -8,6 +8,7 @@
 
 import AppKit
 import UserNotifications
+import os.log
 
 /// Controls the display of user notifications.
 class NotificationController: NSObject, UNUserNotificationCenterDelegate {
@@ -64,7 +65,7 @@ class NotificationController: NSObject, UNUserNotificationCenterDelegate {
     // TODO: We probably should inform the user that it does not make sense to run this
     // app with notifications disabled.
     static func handleNotificationError(_ error: Error?) {
-        print("failed to get authorization: \(error?.localizedDescription ?? "<nil>")")
+        os_log("Failed to get notification authorization: %{public}@?", error?.localizedDescription ?? "<nil>")
     }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {

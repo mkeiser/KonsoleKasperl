@@ -12,21 +12,19 @@ import ServiceManagement
 /// Encapsulates various functionality to control the helper tool.
 class HelperController {
 
-    func start() {
-        HelperController.setHelperAppRunning(true)
+    func start() throws {
+        try HelperController.setHelperAppRunning(true)
     }
 
-    func stop() {
+    func stop() throws {
         if !UserDefaults.standard.startAtLogin {
-            HelperController.setHelperAppRunning(false)
+            try HelperController.setHelperAppRunning(false)
         }
     }
 
-    private static func setHelperAppRunning(_ shouldRun: Bool) {
+    private static func setHelperAppRunning(_ shouldRun: Bool) throws {
         guard SMLoginItemSetEnabled("com.TristanInc.Kasperl-Helper" as CFString, shouldRun) == true else {
-            let error = shouldRun ? HelperControllerError.failedToLaunchHelperTool : HelperControllerError.failedToQuitHelperTool
-            NSApplication.shared.presentError(error)
-            return
+            throw shouldRun ? HelperControllerError.failedToLaunchHelperTool : HelperControllerError.failedToQuitHelperTool
         }
     }
 

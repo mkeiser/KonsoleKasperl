@@ -7,13 +7,19 @@
 //
 
 import Cocoa
+import os.log
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     let helperController = HelperController()
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        helperController.start()
+
+        do {
+            try helperController.start()
+        } catch {
+            NSApplication.shared.presentError(error)
+        }
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
@@ -21,9 +27,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationWillTerminate(_ notification: Notification) {
-        helperController.stop()
+        do {
+            try helperController.stop()
+        } catch {
+            os_log("Error quitting helper app: %{public}@?", error.localizedDescription)
+        }
     }
-
-
 }
 
