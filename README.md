@@ -1,10 +1,8 @@
-# Konsole Kasperl ![](ImageSources/Icon128.png)
-_A little macOS utility that warns you if Console.app is running in the background._
+# Konsole Kasperl ![](ImageSources/Icon128.svg)
+_A little macOS utility that displays a warning if Console.app is clowning around in the background._
 
 
-Do you know the feeling when your mac seems to grind to a halt, especially during compiling, but later it turns out that you simply forgot that `Console.app` was running in the background? That `git bisect` would have finished in a fraction of the time...
+We all know that situation: You are doing something resource intensive, like, say, compiling something with Xcode. But everything seems to go excruciatingly slow today, and you say to yourself: "I should _really_ get a faster machine soon..." But then, haha, it turns out that you just forgot to quit Console.
 
-Well, I've finally had enough and wrote me a utility that warns me when the **Console is clowning around in the background**. 
-
-If Console is running in the background for some amount of time, Kasperl will post a notification. You can choose to quit Console directly from the notification. If you ignore it, Kasperl will increase the amount of time after which it will warn you again.
+Well, I've finally had enough and wrote me a utility that displays a notification if Console is running in the background. I hope this will one day save me from a $3000 impulse purchase.
 
