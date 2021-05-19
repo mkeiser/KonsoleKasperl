@@ -65,6 +65,15 @@ class ConsoleMonitor: NSObject {
         self.startTimer()
     }
 
+    private func resetAndStart() {
+        self.intervalTier.reset()
+        if NSWorkspace.shared.isConsoleRunningInBackground {
+            self.doStartMonitoring()
+        } else {
+            self.getNotifiedWhenAnyAppResignsActive()
+        }
+    }
+
     private func startTimer() {
         self.timer?.invalidate()
         self.timer = Timer.scheduledTimer(withTimeInterval: self.intervalTier.timeInterval, repeats: false) { [weak self] _ in
@@ -107,11 +116,7 @@ extension ConsoleMonitor {
     /// Start observing the Console.app status. The receiver will monitor the status of the Console application, and if it
     /// stays inactive for longer periods of time, it will inform the delegate.
     func start() {
-        if NSWorkspace.shared.isConsoleRunningInBackground {
-            self.doStartMonitoring()
-        } else {
-            self.getNotifiedWhenAnyAppResignsActive()
-        }
+        self.resetAndStart()
     }
 
     /// Quits the Console.app.
@@ -126,8 +131,7 @@ extension ConsoleMonitor {
             consoleApp.activate(options: [])
             return
         }
-        self.intervalTier.reset()
-        self.getNotifiedWhenAnyAppResignsActive()
+        self.resetAndStart()
     }
 
     /// Informs the receiver that the user dismissed our notification. We take this opportunity to
