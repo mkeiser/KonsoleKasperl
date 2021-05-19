@@ -417,6 +417,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Kasperl Helper/Kasperl_Helper.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = V85GBYB7B9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Kasperl Helper/Info.plist";
@@ -424,6 +425,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TristanInc.Kasperl-Helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -438,6 +440,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Kasperl Helper/Kasperl_Helper.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = V85GBYB7B9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Kasperl Helper/Info.plist";
@@ -445,6 +448,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TristanInc.Kasperl-Helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
