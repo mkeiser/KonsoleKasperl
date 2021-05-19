@@ -25,7 +25,18 @@ class ConsoleMonitor: NSObject {
     }
 
     private func getNotifiedWhenAnyAppResignsActive() {
+        NSWorkspace.shared.notificationCenter.removeObserver(self, notificationNames: Notification.Name.resignActiveNotifications)
         NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(Self.someAppDidResignActive(_:)), notificationNames: Notification.Name.resignActiveNotifications)
+    }
+
+    private func getNotifiedWhenAnyAppActivatesOrQuits() {
+        NSWorkspace.shared.notificationCenter.removeObserver(self, notificationNames: Notification.Name.activateOrQuitNotifications)
+        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(Self.someAppDidActivateOrQuit(_:)), notificationNames: Notification.Name.activateOrQuitNotifications)
+    }
+
+    private func getNotifiedWhenComputerOrDisplayWakes() {
+        NSWorkspace.shared.notificationCenter.removeObserver(self, notificationNames: Notification.Name.computerWakeNotifications)
+        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(Self.computerDidWake(_:)), notificationNames: Notification.Name.computerWakeNotifications)
     }
 
     @objc private func someAppDidResignActive(_ note: Notification) {
@@ -34,14 +45,14 @@ class ConsoleMonitor: NSObject {
         }
     }
 
-    private func getNotifiedWhenAnyAppActivatesOrQuits() {
-        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(Self.someAppDidActivateOrQuit(_:)), notificationNames: Notification.Name.activateOrQuitNotifications)
-    }
-
     @objc private func someAppDidActivateOrQuit(_ note: Notification) {
         if note.isConsoleAppNotification {
             self.consoleAppDidActivateOrQuit()
         }
+    }
+
+    @objc private func computerDidWake(_ note: Notification) {
+        self.resetAndStart()
     }
 
     func consoleAppDidResignActive() {
@@ -200,6 +211,12 @@ private extension Notification.Name {
         NSWorkspace.didUnhideApplicationNotification,
         NSWorkspace.didTerminateApplicationNotification
     ]
+
+    static var computerWakeNotifications: [Self] = [
+        NSWorkspace.didWakeNotification,
+        NSWorkspace.screensDidWakeNotification,
+    ]
+
 }
 
 extension NotificationCenter {
