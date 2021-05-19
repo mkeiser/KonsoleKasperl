@@ -24,64 +24,61 @@ class ConsoleMonitor: NSObject {
         self.delegate = delegate
     }
 
-    private let startObservingTriggers = [
-        NSWorkspace.didHideApplicationNotification,
-        NSWorkspace.didDeactivateApplicationNotification
-    ]
-
-    private func startMonitoringOnNextDeactivate() {
-        startObservingWorkspaceNotifications(startObservingTriggers, selector:  #selector(gotStartObservingNote(_:)))
+    private func getNotifiedWhenAnyAppResignsActive() {
+        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(Self.someAppDidResignActive(_:)), notificationNames: Notification.Name.resignActiveNotifications)
     }
 
-    @objc private func gotStartObservingNote(_ note: Notification) {
+    @objc private func someAppDidResignActive(_ note: Notification) {
         if note.isConsoleAppNotification {
-            stopObservingWorkspaceNotifications(startObservingTriggers)
-            self.doStartMonitoring()
+            self.consoleAppDidResignActive()
         }
     }
 
-    private let stopObservingTriggers = [
-        NSWorkspace.didActivateApplicationNotification,
-        NSWorkspace.didUnhideApplicationNotification,
-        NSWorkspace.didTerminateApplicationNotification
-    ]
-
-    private func stopMonitoringOnNextActivateOrQuit() {
-        startObservingWorkspaceNotifications(stopObservingTriggers, selector:  #selector(gotStopObservingNote(_:)))
+    private func getNotifiedWhenAnyAppActivatesOrQuits() {
+        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(Self.someAppDidActivateOrQuit(_:)), notificationNames: Notification.Name.activateOrQuitNotifications)
     }
 
-    @objc private func gotStopObservingNote(_ note: Notification) {
+    @objc private func someAppDidActivateOrQuit(_ note: Notification) {
         if note.isConsoleAppNotification {
-            stopObservingWorkspaceNotifications(stopObservingTriggers)
-            self.doStopMonitoring()
-            startMonitoringOnNextDeactivate()
+            self.consoleAppDidActivateOrQuit()
         }
+    }
+
+    func consoleAppDidResignActive() {
+        NSWorkspace.shared.notificationCenter.removeObserver(self, notificationNames: Notification.Name.resignActiveNotifications)
+        self.doStartMonitoring()
+    }
+
+    func consoleAppDidActivateOrQuit() {
+        NSWorkspace.shared.notificationCenter.removeObserver(self, notificationNames: Notification.Name.activateOrQuitNotifications)
+        self.doStopMonitoring()
+        self.getNotifiedWhenAnyAppResignsActive()
     }
 
     /// Starts monitoring the console app.
     private func doStartMonitoring() {
         // reset this flag
-        warnNextCheck = false
+        self.warnNextCheck = false
         // check current status immediately (might modify warnNextCheck again)
-        checkIfConsoleRunningInBackground()
+        self.checkIfConsoleRunningInBackground()
         // start the timer
-        startTimer()
+        self.startTimer()
     }
 
     private func startTimer() {
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: self.intervalTier.timeInterval, repeats: false) { [weak self] _ in
+        self.timer?.invalidate()
+        self.timer = Timer.scheduledTimer(withTimeInterval: self.intervalTier.timeInterval, repeats: false) { [weak self] _ in
             self?.checkIfConsoleRunningInBackground()
         }
-        timer?.tolerance = 3
+        self.timer?.tolerance = 3
     }
 
     private func doStopMonitoring() {
-        timer?.invalidate()
+        self.timer?.invalidate()
     }
 
     /// Checks the current state of the Console.app. If Console is running in the background and `warnNextCheck` is true, triggers a
-    /// user notification, else it set `warnNextCheck` to true.
+    /// user notification, else it sets `warnNextCheck` to `true`.
     private func checkIfConsoleRunningInBackground() {
         let runningInBackground = NSWorkspace.shared.isConsoleRunningInBackground
 
@@ -93,24 +90,13 @@ class ConsoleMonitor: NSObject {
     }
 
     private func triggerUserNotification() {
-        increaseTimeInterval()
-        delegate?.doNotify(monitor: self)
+        self.increaseTimeInterval()
+        self.delegate?.doNotify(monitor: self)
     }
 
     private func increaseTimeInterval() {
         self.intervalTier.increase()
-        startTimer()
-    }
-
-    private func startObservingWorkspaceNotifications(_ notifications: [NSNotification.Name], selector: Selector) {
-        notifications.forEach {
-            NSWorkspace.shared.notificationCenter.addObserver(self, selector: selector, name: $0, object: nil)
-        }
-    }
-    private func stopObservingWorkspaceNotifications(_ notifications: [NSNotification.Name]) {
-        notifications.forEach {
-            NSWorkspace.shared.notificationCenter.removeObserver(self, name: $0, object: nil)
-        }
+        self.startTimer()
     }
 }
 
@@ -122,9 +108,9 @@ extension ConsoleMonitor {
     /// stays inactive for longer periods of time, it will inform the delegate.
     func start() {
         if NSWorkspace.shared.isConsoleRunningInBackground {
-            doStartMonitoring()
+            self.doStartMonitoring()
         } else {
-            startMonitoringOnNextDeactivate()
+            self.getNotifiedWhenAnyAppResignsActive()
         }
     }
 
@@ -141,13 +127,13 @@ extension ConsoleMonitor {
             return
         }
         self.intervalTier.reset()
-        startMonitoringOnNextDeactivate()
+        self.getNotifiedWhenAnyAppResignsActive()
     }
 
-    /// Informs the receiver that the user dismissed out notification. We take this opportunity to
+    /// Informs the receiver that the user dismissed our notification. We take this opportunity to
     /// restart the timer since we don't want to annoy the user with a new notification right away.
     func userDismissed() {
-        startTimer()
+        self.startTimer()
     }
 }
 
@@ -163,10 +149,10 @@ private struct IntervalTier {
     private var tierIndex = 0
 
     mutating func reset() {
-        tierIndex = 0
+        self.tierIndex = 0
     }
     mutating func increase() {
-        tierIndex = min(tierIndex+1, IntervalTier.intervalTiers.endIndex)
+        self.tierIndex = min(tierIndex+1, IntervalTier.intervalTiers.endIndex)
     }
 
     var timeInterval: TimeInterval {
@@ -197,4 +183,32 @@ private extension Notification {
     var isConsoleAppNotification: Bool {
         (self.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication)?.isConsoleApp == true
     }
+}
+
+private extension Notification.Name {
+    static var resignActiveNotifications: [Self] = [
+        NSWorkspace.didHideApplicationNotification,
+        NSWorkspace.didDeactivateApplicationNotification
+    ]
+
+    static var activateOrQuitNotifications: [Self] = [
+        NSWorkspace.didActivateApplicationNotification,
+        NSWorkspace.didUnhideApplicationNotification,
+        NSWorkspace.didTerminateApplicationNotification
+    ]
+}
+
+extension NotificationCenter {
+    func addObserver(_ observer: Any, selector: Selector, notificationNames: [Notification.Name], object: Any? = nil) {
+        notificationNames.forEach {
+            self.addObserver(observer, selector: selector, name: $0, object: object)
+        }
+    }
+
+    func removeObserver(_ observer: Any, notificationNames: [Notification.Name], object: Any? = nil) {
+        notificationNames.forEach {
+            self.removeObserver(observer, name: $0, object: object)
+        }
+    }
+
 }
